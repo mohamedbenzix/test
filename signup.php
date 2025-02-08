@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 
 // Get JSON input
-$data = json_decode(file_get_contents("php://input"), true);
+$data = json_decode(file_get_contents("users.json"), true);
 
 if (!$data) {
     echo json_encode(["success" => false, "message" => "Invalid data"]);
